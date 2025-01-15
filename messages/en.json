@@ -1,0 +1,16 @@
+{
+  "Metadata": {
+    "title": "turtle Book",
+    "description": "turtle Book: Your Smart University Library Management Solution"
+  },
+  "IndexPage": {
+    "greeting": "Hello, {{name}}!",
+    "welcome": "Thank you for visiting Book Turtle",
+    "to-second-page": "To second page",
+    "author": {
+      "name": "Yang Da-Young",
+      "email": "flyflydada@gmail.com"
+    },
+    "title": "turtle Book"
+  }
+}

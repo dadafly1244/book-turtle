@@ -1,0 +1,16 @@
+{
+  "Metadata": {
+    "title": "책거북이",
+    "description": "책거북이는 효율적인 대학교 도서관 운영 서비스 입니다."
+  },
+  "IndexPage": {
+    "greeting": "{{name}}님 안녕하세요!",
+    "welcome": "저희 책거북이를 방문해 주셔서 감사합니다",
+    "to-second-page": "두번쨰 페이지로!",
+    "title": "책거북이",
+    "author": {
+      "name": "양다영",
+      "email": "flyflydada@gmail.com"
+    }
+  }
+}
