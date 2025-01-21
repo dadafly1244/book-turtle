@@ -1,5 +1,7 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import BookList from "@/components/BookList";
+import BookOverview from "@/components/BookOverview";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -15,14 +17,18 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function IndexPage({ params }) {
+const IndexPage = async ({ params }) => {
   const { locale } = await params;
-  // Enable static rendering
   setRequestLocale(locale);
 
-  // Once the request locale is set, you
-  // can call hooks from `next-intl`
   const t = await getTranslations("IndexPage");
 
-  return <div>{t("title")}</div>;
-}
+  return (
+    <div className="root-container">
+      {t("title")}
+      <BookList />
+      <BookOverview />
+    </div>
+  );
+};
+export default IndexPage;

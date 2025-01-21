@@ -12,5 +12,10 @@
       "email": "flyflydada@gmail.com"
     },
     "title": "turtle Book"
+  },
+  "Header": {
+    "logo": "turtle Book Logo",
+    "title": "turtle Book",
+    "library": "Library"
   }
 }

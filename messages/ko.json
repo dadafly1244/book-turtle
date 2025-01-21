@@ -12,5 +12,10 @@
       "name": "양다영",
       "email": "flyflydada@gmail.com"
     }
+  },
+  "Header": {
+    "logo": "책거북이 로고",
+    "title": "책거북이",
+    "library": "도서관"
   }
 }
