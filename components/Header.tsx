@@ -5,8 +5,10 @@ import React from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { signOut } from "@/auth";
+import { Button } from "@/components/ui/button";
 
-const Header = ({ locale }: { locale: "en" | "ko" }) => {
+const Header = ({ locale, session }: { locale: "en" | "ko" }) => {
   const pathname = usePathname();
   const t = useTranslations("Header");
   console.log(pathname);
@@ -25,6 +27,18 @@ const Header = ({ locale }: { locale: "en" | "ko" }) => {
       </Link>
       <ul className="flex flex-row items-center gap-8">
         <Link href={`/${locale}/library`}>{t("library")}</Link>
+        <li>
+          <form
+            action={async () => {
+              "use server";
+
+              await signOut();
+            }}
+            className="mb-10"
+          >
+            <Button>Logout</Button>
+          </form>
+        </li>
       </ul>
     </header>
   );
