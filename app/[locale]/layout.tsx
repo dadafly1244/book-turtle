@@ -6,6 +6,8 @@ import Header from "@/components/Header";
 import { auth } from "@/auth";
 import { after } from "next/server";
 import { db } from "@/database/drizzle";
+import { users } from "@/database/schema";
+import { eq } from "drizzle-orm";
 
 export default async function LocaleLayout({
   children,

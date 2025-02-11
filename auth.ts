@@ -45,7 +45,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     }),
   ],
   pages: {
-    signIn: "/sign-in",
+    signIn: `ko/auth/sign-in`,
   },
   callbacks: {
     signIn: async () => {
@@ -67,17 +67,23 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
       return session;
     },
+
+    authorized({ auth, request: { nextUrl } }) {
+      const isLoggedIn = !!auth?.user;
+      const isOnDashboard = nextUrl.pathname.startsWith("/");
+
+      if (isOnDashboard) {
+        if (isLoggedIn) return true;
+        return false;
+      } else if (isLoggedIn) {
+        return Response.redirect(new URL("/", nextUrl));
+      }
+      return true;
+    },
     // redirect: async ({ url, baseUrl }) => {
+    //   // 인증 관련 리다이렉션 단순화
+    //   if (url.startsWith(baseUrl)) return url;
     //   if (url.startsWith("/")) return `${baseUrl}${url}`;
-    //   if (url) {
-    //     const { search, origin } = new URL(url);
-    //     const callbackUrl = new URLSearchParams(search).get("callbackUrl");
-    //     if (callbackUrl)
-    //       return callbackUrl.startsWith("/")
-    //         ? `${baseUrl}${callbackUrl}`
-    //         : callbackUrl;
-    //     if (origin === baseUrl) return url;
-    //   }
     //   return baseUrl;
     // },
   },

@@ -21,11 +21,11 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import Link from "next/link";
 import { FIELD_NAMES, FIELD_TYPES } from "@/constants";
 import FileUpload from "@/components/FileUpload";
 import { toast } from "@/hooks/use-toast";
-import { useRouter } from "next/navigation";
+import { Link, useRouter } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 
 interface Props<T extends FieldValues> {
   schema: ZodType<T>;
@@ -41,6 +41,7 @@ const AuthForm = <T extends FieldValues>({
   onSubmit,
 }: Props<T>) => {
   const router = useRouter();
+  const locale = useLocale();
 
   const isSignIn = type === "SIGN_IN";
 
@@ -132,7 +133,7 @@ const AuthForm = <T extends FieldValues>({
         {isSignIn ? "New to BookWise? " : "Already have an account? "}
 
         <Link
-          href={isSignIn ? "/sign-up" : "/sign-in"}
+          href={isSignIn ? `/${locale}/sign-up` : `/${locale}/sign-in`}
           className="font-bold text-primary"
         >
           {isSignIn ? "Create an account" : "Sign in"}

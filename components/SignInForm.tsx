@@ -1,9 +1,10 @@
-import React from "react";
+"use client";
+
 import AuthForm from "@/components/AuthForm";
 import { signInSchema } from "@/lib/validations";
 import { signInWithCredentials } from "@/lib/actions/auth";
 
-const Page = () => (
+const SignInForm = () => (
   <AuthForm
     type="SIGN_IN"
     schema={signInSchema}
@@ -15,4 +16,4 @@ const Page = () => (
   />
 );
 
-export default Page;
+export default SignInForm;

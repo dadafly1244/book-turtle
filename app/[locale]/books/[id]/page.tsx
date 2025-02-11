@@ -2,13 +2,17 @@ import React from "react";
 import { db } from "@/database/drizzle";
 import { books } from "@/database/schema";
 import { eq } from "drizzle-orm";
-import { redirect } from "next/navigation";
+import { redirect } from "@/i18n/routing";
 import { auth } from "@/auth";
 import BookOverview from "@/components/BookOverview";
 import BookVideo from "@/components/BookVideo";
 
-const BooksPage = async ({ params }: { params: Promise<{ id: string }> }) => {
-  const id = (await params).id;
+type PageParams = {
+  id: string;
+  locale: string;
+};
+const BooksPage = async ({ params }: { params: PageParams }) => {
+  const { id, locale } = params;
   const session = await auth();
 
   // Fetch data based on id
@@ -18,8 +22,12 @@ const BooksPage = async ({ params }: { params: Promise<{ id: string }> }) => {
     .where(eq(books.id, id))
     .limit(1);
 
-  if (!bookDetails) redirect("/404");
-
+  if (!bookDetails) {
+    redirect({
+      href: "/404",
+      locale: locale,
+    });
+  }
   return (
     <>
       <BookOverview {...bookDetails} userId={session?.user?.id as string} />
