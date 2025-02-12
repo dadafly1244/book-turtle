@@ -1,0 +1,10 @@
+{
+  "Index": {
+    "title": "안녕하세요",
+    "description": "Next.js 다국어 지원 예제입니다"
+  },
+  "auth": {
+    "signin": "로그인",
+    "signout": "로그아웃"
+  }
+}

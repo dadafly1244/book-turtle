@@ -1,0 +1,10 @@
+{
+  "Index": {
+    "title": "Hello",
+    "description": "This is a Next.js i18n example"
+  },
+  "auth": {
+    "signin": "Sign In",
+    "signout": "Sign Out"
+  }
+}
