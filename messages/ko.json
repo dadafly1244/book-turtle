@@ -1,0 +1,14 @@
+{
+  "HomePage": {
+    "title": "홈",
+    "about": "소개"
+  },
+  "About": {
+    "title": "소개",
+    "homePage": "홈"
+  },
+  "Nav": {
+    "about": "소개",
+    "homePage": "홈"
+  }
+}
