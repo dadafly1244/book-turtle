@@ -8,7 +8,7 @@
     "homePage": "HomePage"
   },
   "Nav": {
-    "homePage": "HomePage",
-    "about": "About"
+    "about": "About",
+    "homePage": "Home"
   }
 }
