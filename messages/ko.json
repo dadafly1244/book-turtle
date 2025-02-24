@@ -10,5 +10,10 @@
   "Nav": {
     "about": "소개",
     "homePage": "홈"
+  },
+  "LocaleSwitcher": {
+    "ko": "한국어",
+    "en": "English",
+    "label": "English"
   }
 }
