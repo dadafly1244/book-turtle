@@ -1,19 +1,42 @@
 {
-  "HomePage": {
-    "title": "HomePage",
-    "about": "About"
+  "ArtistBio": {
+    "homePage": "HomePage",
+    "title": "Artist Bio"
   },
-  "About": {
-    "title": "About",
+  "Artworks": {
+    "title": "Artworks"
+  },
+  "Common": {
     "homePage": "HomePage"
   },
-  "Nav": {
-    "about": "About",
-    "homePage": "Home"
+  "Contact": {
+    "title": "Contact"
+  },
+  "Exhibitions": {
+    "title": "Exhibitions"
+  },
+  "HomePage": {
+    "artistBio": "Artist Bio",
+    "title": "HomePage"
   },
   "LocaleSwitcher": {
-    "ko": "한국어",
     "en": "English",
+    "ko": "한국어",
     "label": "한국어"
+  },
+  "Nav": {
+    "artistBio": "Artist Bio",
+    "artworks": "Artworks",
+    "contact": "Contact",
+    "exhibitions": "Exhibitions",
+    "homePage": "Home",
+    "reviews": "Reviews",
+    "shop": "Shop"
+  },
+  "Reviews": {
+    "title": "Reviews"
+  },
+  "Shop": {
+    "title": "Shop"
   }
 }
