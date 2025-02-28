@@ -1,62 +1,135 @@
 import type { Config } from "tailwindcss";
 
 export default {
-    darkMode: ["class"],
-    content: [
+  darkMode: ["class"],
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-  	extend: {
-  		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
-  			muted: {
-  				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
-  			},
-  			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
-  			},
-  			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
-  			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			}
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		}
-  	}
+    extend: {
+      colors: {
+        primary: {
+          50: "#fbfbff",
+          100: "#efefff",
+          200: "#dbdbff",
+          300: "#bfbfff",
+          400: "#9b9bff",
+          500: "#7070ff",
+          600: "#3c3cff",
+          700: "#0000ff",
+          800: "#00008e",
+          900: "#00004a",
+          950: "#000033",
+          default: "#0000ff",
+        },
+        background: {
+          50: "#ffffff",
+          100: "#fefefe",
+          200: "#fdfdfd",
+          300: "#fcfcfc",
+          400: "#fafafa",
+          500: "#f8f8f8",
+          600: "#f5f5f5",
+          700: "#f2f2f2",
+          800: "#7a7a7a",
+          900: "#323232",
+          950: "#1a1a1a",
+          default: "#f2f2f2",
+        },
+        secondary: {
+          50: "#fefefb",
+          100: "#fdf9f1",
+          200: "#faf3df",
+          300: "#f7e9c6",
+          400: "#f2dca7",
+          500: "#eccd80",
+          600: "#e5bb52",
+          700: "#d9a520",
+          800: "#795c12",
+          900: "#40300a",
+          950: "#2c2207",
+          700: "#d9a520",
+        },
+        Accent: {
+          50: "#f9f9ff",
+          100: "#e8e8ff",
+          200: "#cbcbff",
+          300: "#a2a2ff",
+          400: "#6e6eff",
+          500: "#2e2eff",
+          600: "#0000e1",
+          700: "#00008a",
+          800: "#00005a",
+          900: "#00003d",
+          950: "#000033",
+        },
+        text: {
+          50: "#fbfcfd",
+          100: "#eff3f6",
+          200: "#dce4ec",
+          300: "#c0cfdd",
+          400: "#9db3c9",
+          500: "#7292b2",
+          600: "#4c6b8a",
+          700: "#2b3d4f",
+          800: "#1d2935",
+          900: "#151d26",
+          950: "#121a21",
+          default: "#2b3d4f",
+        },
+      },
+
+      // colors: {
+      //   background: "hsl(var(--background))",
+      //   foreground: "hsl(var(--foreground))",
+      //   card: {
+      //     DEFAULT: "hsl(var(--card))",
+      //     foreground: "hsl(var(--card-foreground))",
+      //   },
+      //   popover: {
+      //     DEFAULT: "hsl(var(--popover))",
+      //     foreground: "hsl(var(--popover-foreground))",
+      //   },
+      //   primary: {
+      //     DEFAULT: "hsl(var(--primary))",
+      //     foreground: "hsl(var(--primary-foreground))",
+      //   },
+      //   secondary: {
+      //     DEFAULT: "hsl(var(--secondary))",
+      //     foreground: "hsl(var(--secondary-foreground))",
+      //   },
+      //   muted: {
+      //     DEFAULT: "hsl(var(--muted))",
+      //     foreground: "hsl(var(--muted-foreground))",
+      //   },
+      //   accent: {
+      //     DEFAULT: "hsl(var(--accent))",
+      //     foreground: "hsl(var(--accent-foreground))",
+      //   },
+      //   destructive: {
+      //     DEFAULT: "hsl(var(--destructive))",
+      //     foreground: "hsl(var(--destructive-foreground))",
+      //   },
+      //   border: "hsl(var(--border))",
+      //   input: "hsl(var(--input))",
+      //   ring: "hsl(var(--ring))",
+      //   chart: {
+      //     "1": "hsl(var(--chart-1))",
+      //     "2": "hsl(var(--chart-2))",
+      //     "3": "hsl(var(--chart-3))",
+      //     "4": "hsl(var(--chart-4))",
+      //     "5": "hsl(var(--chart-5))",
+      //   },
+      // },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+    },
   },
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;

@@ -1,19 +1,24 @@
 {
+  "ArtistBio": {
+    "homePage": "홈",
+    "title": "예술가 소개"
+  },
   "HomePage": {
-    "title": "홈",
-    "about": "소개"
-  },
-  "About": {
-    "title": "소개",
-    "homePage": "홈"
-  },
-  "Nav": {
-    "about": "소개",
-    "homePage": "홈"
+    "artistBio": "예술가 소개",
+    "title": "홈"
   },
   "LocaleSwitcher": {
-    "ko": "한국어",
     "en": "English",
+    "ko": "한국어",
     "label": "English"
+  },
+  "Nav": {
+    "artistBio": "예술가 소개",
+    "artworks": "작품목록",
+    "contact": "연락처",
+    "exhibitions": "전시회",
+    "homePage": "홈",
+    "reviews": "후기",
+    "shop": "구매"
   }
 }

@@ -1,19 +1,24 @@
 {
+  "ArtistBio": {
+    "homePage": "HomePage",
+    "title": "Artist Bio"
+  },
   "HomePage": {
-    "title": "HomePage",
-    "about": "About"
-  },
-  "About": {
-    "title": "About",
-    "homePage": "HomePage"
-  },
-  "Nav": {
-    "about": "About",
-    "homePage": "Home"
+    "artistBio": "Artist Bio",
+    "title": "HomePage"
   },
   "LocaleSwitcher": {
-    "ko": "한국어",
     "en": "English",
+    "ko": "한국어",
     "label": "한국어"
+  },
+  "Nav": {
+    "artistBio": "Artist Bio",
+    "artworks": "Artworks",
+    "contact": "Contact",
+    "exhibitions": "Exhibitions",
+    "homePage": "Home",
+    "reviews": "Reviews",
+    "shop": "Shop"
   }
 }

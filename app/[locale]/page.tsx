@@ -8,7 +8,7 @@ export default function HomePage() {
     <div>
       <Nav />
       <h1>{t("title")}</h1>
-      <Link href="/about">{t("about")}</Link>
+      <Link href="/artistBio">{t("about")}</Link>
     </div>
   );
 }
